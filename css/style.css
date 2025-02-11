@@ -1,0 +1,68 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set full-screen background and center content */
+body {
+  background-color: #001f3f; /* Deep navy blue */
+  color: #ffffff;           /* White font color */
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center content container */
+.container {
+  text-align: center;
+}
+
+/* Logo styling */
+#logo {
+  max-width: 200px; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+/* Message styling */
+#message h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#message p {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect on the text (also works without JS) */
+#message:hover h1,
+#message:hover p {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Class to trigger the pulse animation via JavaScript */
+.pulse {
+  animation: pulse 0.6s ease-out;
+}

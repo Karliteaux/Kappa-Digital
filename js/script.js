@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     messageEl.classList.remove("pulse");
   });
 
+
   /* -------------------------------------------
      Matrix Rain Animation on Canvas
   ------------------------------------------- */

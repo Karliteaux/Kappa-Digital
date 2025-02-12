@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     drops[i] = Math.floor(Math.random() * canvas.height / fontSize);
   }
 
+  // Speed factor to slow down the rainfall (try values less than 1)
+  const speed = 0.5;
+
   // Function to draw the matrix rain effect
   function drawMatrix() {
     // Create a fading effect by drawing a semi-transparent rectangle over the entire canvas
@@ -65,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
         drops[i] = 0;
       }
-      // Increment the y coordinate for the drop
-      drops[i]++;
+      // Increment the drop's y-coordinate by the defined speed factor
+      drops[i] += speed;
     }
-    // Request the next frame
+    // Request the next animation frame
     requestAnimationFrame(drawMatrix);
   }
 

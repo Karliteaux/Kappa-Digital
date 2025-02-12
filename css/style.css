@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Set full-screen background and center content */
+/* Full-screen background and flex centering */
 body {
   background-color: #001f3f; /* Deep navy blue */
   color: #ffffff;           /* White font color */
@@ -16,15 +16,24 @@ body {
   justify-content: center;
 }
 
-/* Center content container */
+/* Container to center content and add responsiveness */
 .container {
   text-align: center;
+  padding: 0 20px;
+  max-width: 600px; /* Limits the text width on larger screens */
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* Logo styling */
+/* Logo styling with extra space below and hover glow */
 #logo {
   max-width: 200px; /* Adjust as needed */
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Increased spacing between logo and text */
+  transition: filter 0.3s ease;
+}
+
+#logo:hover {
+  filter: drop-shadow(0 0 10px #ffffff); /* White glow effect on hover */
 }
 
 /* Message styling */
@@ -39,7 +48,7 @@ body {
   transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Hover effect on the text (also works without JS) */
+/* Hover effect on the text */
 #message:hover h1,
 #message:hover p {
   transform: scale(1.05);
